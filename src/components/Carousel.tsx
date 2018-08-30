@@ -1,6 +1,6 @@
 import * as React from "react";
 import Slider from "react-slick";
-
+import { CardTitle } from "../components/CardTitle"
 import styles from "../styles/Carousel.module.scss";
 
 interface CarouselProps {
@@ -55,6 +55,12 @@ class Carousel extends React.Component<CarouselProps, CarouselState> {
   public render() {
     return (
       <div className={styles.Container}>
+        <CardTitle 
+          title="featured" 
+          tag="h3"
+          prefix="no"
+          className={styles.CardTitle}
+        />
         <Slider
           fade={true}
           arrows={false}

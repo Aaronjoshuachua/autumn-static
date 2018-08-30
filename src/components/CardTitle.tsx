@@ -17,32 +17,33 @@ export const CardTitle: React.SFC<CardTitleProps> = ({
   prefix
 }) => {
   const xclassName = [styles.Title, className].join(" ");
+  const xprefix = prefix || "Lastest"
   switch (tag) {
     case "h4":
       return (
         <h4 style={style} className={xclassName}>
-          <span>{prefix || "Lastest"}</span>
+          { prefix === "no" ? null : <span>{xprefix}</span> }
           {title}
         </h4>
       );
     case "h3":
       return (
         <h3 style={style} className={xclassName}>
-          <span>{prefix || "Lastest"}</span>
+          { prefix === "no" ? null : <span>{xprefix}</span> }
           {title}
         </h3>
       );
     case "h2":
       return (
         <h2 style={style} className={xclassName}>
-          <span>{prefix || "Lastest"}</span>
+          { prefix === "no" ? null : <span>{xprefix}</span> }
           {title}
         </h2>
       );
     default:
       return (
         <h4 style={style} className={xclassName}>
-          <span>{prefix || "Lastest"}</span>
+          { prefix === "no" ? null : <span>{xprefix}</span> }
           {title}
         </h4>
       );

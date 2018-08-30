@@ -33,3 +33,7 @@
     @include desktop { height: $caro-nav-image-lg; border-bottom: $global-border-bottom; }
     @include tablet { height: $caro-nav-image-sm; }
 }
+
+.CardTitle {
+    margin-bottom: 1rem;
+}

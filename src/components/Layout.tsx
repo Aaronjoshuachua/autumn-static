@@ -16,6 +16,7 @@ import { File } from "../graphql-types";
 import "../styles/_global/responsive.css";
 import Carousel from "./Carousel";
 import Footer from "./Footer/Footer";
+import { CardTitle } from "./CardTitle";
 
 interface LayoutProps {
   images: File;

@@ -6,43 +6,19 @@ media_folder: "/static/files/images"
 public_folder: "/files/images"
 
 collections:
-  - label: "About"
-    name: "about"
-    media_folder: "static/files/images/members/"
-    public_folder: "/files/images/members/"
-    folder: "content/about"
-    files:
-      - label: "About"
-      - name: "about"
-        file: "about.md"
-        fields:
-      - {label: "Content Type", name: "contentType", widget: "hidden", default: "about"}
-      - {label: "Path", name: "path", widget: "hidden", default: "/about"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - label: Members
-        name: members
-        widget: list
-        fields:
-          - {label: Photo, name: photo, widget: image }
-          - {label: Fullname, name: fullname, widget: string}
-          - {label: Position, name: position, widget: string}
-          - {label: Quote, name: bio, widget: string}
   - label: "News"
     name: "news"
     folder: "content/news"
-    media_folder: "static/files/images/news/"
-    public_folder: "/files/images/news/"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Content Type", name: "contentType", widget: "hidden", default: "news"}
-      - {label: "Path", name: "path", widget: "string"}
+      - {label: "Path", name: "path", widget: "string", default: "/news/"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Author", name: "author", widget: "string"}
       - {label: "PostImage", name: "postimage", widget: "file"}
+      - {label: "Body", name: "body", widget: "markdown"}
       - label: Tags
         name: tags
         widget: list
