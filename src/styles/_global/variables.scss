@@ -1,0 +1,42 @@
+/* global variables */
+$global-grid-template-areas-lg: "side1 main side2";
+$global-grid-template-areas-sm: "main";
+
+$global-grid-template-columns-lg: 1fr 80% 1fr;
+$global-grid-template-columns-md: 1fr 85% 1fr;
+$global-grid-template-columns-sm: 100%;
+
+$global-header-body-gap: 45px;
+$global-letter-spacing: 1.6px;
+$global-animation-fade: 0.3s;
+$global-font-color: white;
+
+$global-border-bottom: 4px solid #c13a45;
+
+/* header variables */
+$header-height: 80px;
+$header-logo-width: 200px;
+$header-logo-width-sm: 150px;
+$header-theme-color: #c13a45;
+$header-anchor-gutter: 52px;
+$header-bkgrd-rgba: rgba(3, 3, 3, 0.45);
+
+/* bread crumb variables */
+$breadcrumb-font-color: $global-font-color;
+
+/* page title variables */
+$page-title-line-height: 1.51572rem;
+$page-title-color: $global-font-color;
+
+/* carousel variables */
+$caro-main-image-xl: 400px;
+$caro-main-image-lg: 350px;
+$caro-main-image-md: 13rem;
+$caro-main-image-sm: 10rem;
+
+$caro-nav-image-lg: 4rem;
+$caro-nav-image-sm: 3rem;
+
+/* news page variables */
+$news-details-theme: rgb(120, 118, 121);
+$news-post-gap: 25px;

@@ -1,0 +1,72 @@
+@import "../_global/variables.scss";
+@import "../_global/mixin.scss";
+
+.Columns {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    grid-gap: 1.45rem;
+
+    .Template {
+        color: rgb(218, 218, 218);
+        font-size: 17px;
+        letter-spacing: 0.5px;
+
+        .TeamMembers {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 15px;
+
+            @include tablet { grid-template-columns: repeat(2, 1fr) }
+            @include lg-mobile { grid-template-columns: repeat(1, 1fr) }
+            @include mobile { grid-template-columns: repeat(1, 1fr) }
+
+            .ProfileCard {
+                position: relative;
+                background: $header-bkgrd-rgba;
+                text-align: center;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                padding-top: 30px;
+            }
+
+            .ProfileInner {
+                padding: 30px;
+            }
+
+            h1, h2, h3, h4, h5 {
+                font-weight: 300;
+                margin-top: 0;
+                margin-bottom: 15px;
+            }
+
+            .Name {
+                font-size: 38px;
+                margin-bottom: 5px;
+                color: rgb(218, 218, 218);
+            }
+
+            .Position {
+                font-size: 18px;
+                font-style: italic;
+                color: #707070;
+                margin-bottom: 2px;
+            }
+            
+            .Divider {
+                margin-top: 5px;
+                margin-bottom: 15px;
+                padding-bottom: 15px;
+                border-bottom: 1px solid #707070;
+            }
+
+            .Bio {
+                color: #707070;
+                font-size: 15px;
+                font-style: italic;
+                margin: 0;
+            }
+        }
+    }
+}

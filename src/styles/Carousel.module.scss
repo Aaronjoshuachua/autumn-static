@@ -1,0 +1,35 @@
+@import "./_global/variables.scss";
+@import "./_global/mixin.scss";
+
+.Container {
+    padding-top: $global-header-body-gap + $header-height;
+
+    margin: 0 auto;
+    max-width: 1100px;
+
+    @include lg-mobile { padding-left: 8%; padding-right: 8%; }
+    @include tablet { padding-left: 12%; padding-right: 12%; }
+    @include desktop { padding-left: 10%; padding-right: 10%; }
+}
+
+.MainImages {
+    background-position: center center;
+    background-size: cover;
+
+    @include xl-desktop { height: $caro-main-image-xl; }
+    @include lg-desktop { height: $caro-main-image-xl; }
+    @include desktop { height: $caro-main-image-lg; }
+    @include tablet { height: $caro-main-image-md; }
+    @include lg-mobile { height: $caro-main-image-md; }
+    @include mobile { height: $caro-main-image-sm; }
+}
+
+.ThumbnailImages {
+    background-position: center center;
+    background-size: cover;
+    
+    @include xl-desktop { height: $caro-nav-image-lg; border-bottom: $global-border-bottom; }
+    @include lg-desktop { height: $caro-nav-image-lg; border-bottom: $global-border-bottom; }
+    @include desktop { height: $caro-nav-image-lg; border-bottom: $global-border-bottom; }
+    @include tablet { height: $caro-nav-image-sm; }
+}

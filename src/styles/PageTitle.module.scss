@@ -1,0 +1,35 @@
+@import "./_global/variables.scss";
+@import "./_global/mixin.scss";
+
+@mixin line {
+    &:after {
+        content: "";
+        display:inline-block;
+        width:100%; height:100%;
+        margin-left: 3%;
+        margin-right:-100%;
+        border-bottom:$global-border-bottom;
+    }
+}
+
+
+.Title {
+    color: $page-title-color;
+    text-transform: uppercase;
+    line-height: $page-title-line-height;
+    overflow: hidden;
+    letter-spacing: $global-letter-spacing;
+
+    @include tablet { @include line }
+    @include desktop { @include line }
+    @include lg-desktop { @include line }
+    @include xl-desktop { @include line }
+}
+
+.TitleNoLine {
+    color: $page-title-color;
+    text-transform: uppercase;
+    line-height: $page-title-line-height;
+    overflow: hidden;
+    letter-spacing: $global-letter-spacing;
+}

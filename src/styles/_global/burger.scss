@@ -1,0 +1,55 @@
+@import "./variables.scss";
+@import "./mixin.scss";
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 28px;
+  height: 20px;
+  right: 5%;
+
+  @include lg-mobile { right: 8%; }
+  
+  top: 30px;
+
+  z-index: 20;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: white;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: white;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #212529;
+  padding: 1.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+padding: 0.8em;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}

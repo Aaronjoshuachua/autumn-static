@@ -1,0 +1,126 @@
+@import "../_global/mixin.scss";
+@import "../_global/variables.scss";
+
+.Columns {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+    @include tablet { grid-template-columns: 1fr };
+    @include lg-mobile { grid-template-columns: 1fr };    
+    @include mobile { grid-template-columns: 1fr };
+
+    grid-gap: 1.45rem;
+}
+
+.Gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
+    grid-auto-rows: 1fr;
+
+    grid-gap: 1rem;
+
+    .Image {
+        position: relative;
+
+        .Icon {
+            position: absolute;
+            color: rgba(255, 255, 255, 0.3);
+            z-index: 4;
+            font-size: 50px;
+            top: 34%;
+            left: 34%;
+        }
+
+        .Overlay {
+            position: absolute;
+            width: 100%; /* Full width (cover the whole page) */
+            height: 100%; /* Full height (cover the whole page) */
+            top: 0; 
+            left: 0;
+            right: 0;
+            bottom: 0;
+            transition: $global-animation-fade;
+            background-color: rgba(193,58,69, 0.5); /* Black background with opacity */
+            z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+        }
+    }
+
+    .Image:hover {
+        cursor: pointer;
+    }
+}
+
+.Gallery::before {
+    content: '';
+    width: 0;
+    padding-bottom: 100%;
+    grid-row: 1 / 1;
+    grid-column: 1 / 1;
+}
+
+.Gallery > *:first-child {
+    grid-row: 1 / 1;
+    grid-column: 1 / 1;
+}
+
+.CardTitle {
+    &:after {
+        @include lg-mobile { width: 50% };
+        @include mobile { width: 50% };
+    }
+}
+
+.Modal {
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+
+    @include tablet {grid-template-columns: 1fr; }
+    @include lg-mobile { grid-template-columns: 1fr; }
+    @include mobile { grid-template-columns: 1fr; }
+}
+
+.Wrapper {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    @include tablet { grid-column: 1; }
+    @include lg-mobile { grid-column: 1; }
+    @include mobile { grid-column: 1; }
+}
+
+.GalleryCard {
+    .CardHead {
+        height: 40px;
+        background-color: #293139;
+        padding-left: 1rem;
+    }
+
+    .Content {
+        background-color: #232930;
+        padding: 1rem;
+        display: grid;
+        // grid-template-columns: repeat(2, 1fr);
+        
+        grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
+        grid-auto-rows: 1fr;
+        grid-gap: 15px;
+
+        .CardLink { text-decoration: none; }
+
+        .CardLink:hover {
+            box-shadow: 0 0 5px 3px rgba(193,58,69, 0.5); 
+            transition: $global-animation-fade;
+        }
+    }
+}

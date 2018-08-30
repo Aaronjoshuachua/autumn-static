@@ -1,0 +1,7 @@
+@import "./_global/variables.scss";
+@import "./_global/mixin.scss";
+
+.Container {
+    color: $breadcrumb-font-color;
+    letter-spacing: $global-letter-spacing;
+}

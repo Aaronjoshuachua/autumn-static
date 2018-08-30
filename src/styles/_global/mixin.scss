@@ -1,0 +1,46 @@
+@import "./variables.scss";
+
+/* Mobile */
+@mixin mobile {
+    @media only screen and (max-width: 414px) { @content; }
+}
+
+@mixin lg-mobile {
+    @media only screen and (min-width: 415px) and (max-width: 767px) { @content; }
+}
+
+/* Tablet / iPad Portrait */
+@mixin tablet {
+    @media only screen and (min-width: 768px) and (max-width: 991px) { @content; }
+}
+
+/* Computer / Desktop / iPad Landscape */
+@mixin desktop {
+    @media only screen and (min-width: 992px) and (max-width: 1199px) { @content; }
+}
+
+/* Large Monitor */
+@mixin lg-desktop {
+    @media only screen and (min-width: 1200px) and (max-width: 1919px) { @content; }
+}
+
+/* Widescreen Monitor */
+@mixin xl-desktop {
+    @media only screen and (min-width: 1920px) { @content; }
+}
+
+/* layout mixins */
+@mixin lg-layout {
+    grid-template-areas: $global-grid-template-areas-lg;
+    grid-template-columns: $global-grid-template-columns-lg;
+}
+
+@mixin md-layout {
+    grid-template-areas: $global-grid-template-areas-lg;
+    grid-template-columns: $global-grid-template-columns-md;
+}
+
+@mixin sm-layout {
+    grid-template-areas: $global-grid-template-areas-sm;
+    grid-template-columns: $global-grid-template-columns-sm;
+}

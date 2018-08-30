@@ -1,0 +1,78 @@
+{
+  "name": "autumn-webpage",
+  "version": "1.0.0",
+  "description": "autumn's new static webpage",
+  "scripts": {
+    "build": "gatsby build",
+    "start": "gatsby develop",
+    "lint:ts": "prettier --write --parser typescript 'src/**/*.{ts,tsx}'",
+    "lint:md": "prettier --write --parser markdown './*.md'",
+    "lint:json": "prettier --write --parser json './*.json'",
+    "type-gen": "gql-gen --schema http://localhost:8000/___graphql --template graphql-codegen-typescript-template --out ./src/graphql-types.d.ts",
+    "type-check": "tsc --noEmit"
+  },
+  "repository": {
+    "type": "https",
+    "url": "https://AndrewThian@bitbucket.org/autumninteractive/autumn-webpage.git"
+  },
+  "keywords": ["gatsby", "autmun-interactive", "webpage"],
+  "author": "Andrew Thian <andrewbobbythian@gmail.com>",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/autumninteractive/autumn-webpage/wiki/Home",
+  "dependencies": {
+    "@types/node": "^10.9.3",
+    "@types/react": "^16.4.12",
+    "@types/react-burger-menu": "^2.2.1",
+    "@types/react-dom": "^16.0.7",
+    "@types/react-helmet": "^5.0.7",
+    "@types/react-slick": "^0.23.2",
+    "gatsby": "^1.9.277",
+    "gatsby-image": "^1.0.55",
+    "gatsby-link": "^1.6.46",
+    "gatsby-plugin-netlify-cms": "^2.0.1",
+    "gatsby-plugin-react-helmet": "^2.0.11",
+    "gatsby-plugin-sass": "^1.0.26",
+    "gatsby-plugin-sharp": "^1.6.48",
+    "gatsby-plugin-typescript": "^1.4.20",
+    "gatsby-plugin-typography": "^1.7.19",
+    "gatsby-remark-copy-linked-files": "^1.5.37",
+    "gatsby-remark-images": "^1.5.67",
+    "gatsby-source-filesystem": "^1.5.39",
+    "gatsby-transformer-remark": "^1.7.44",
+    "gatsby-transformer-sharp": "^1.6.27",
+    "netlify-cms": "^1.7.0",
+    "node-sass": "^4.9.3",
+    "react": "^16.4.2",
+    "react-burger-menu": "^2.5.2",
+    "react-dom": "^16.4.2",
+    "react-helmet": "^5.2.0",
+    "react-slick": "^0.23.1",
+    "react-typography": "^0.16.13",
+    "sass-loader": "^7.1.0",
+    "typography": "^0.16.17"
+  },
+  "devDependencies": {
+    "graphql-code-generator": "^0.11.0",
+    "graphql-codegen-typescript-template": "^0.11.0",
+    "husky": "^1.0.0-rc.13",
+    "lint-staged": "^7.2.2",
+    "prettier": "^1.14.2",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.15.0",
+    "tslint-react": "^3.6.0",
+    "typescript": "^3.0.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "linters": {
+      "*.{ts,tsx}": ["npm run lint:ts", "git add"],
+      "*.md": ["npm run lint:md", "git add"],
+      "*.json": ["npm run lint:json", "git add"]
+    },
+    "ignore": ["public/*", "node_modules/*", ".cache/*"]
+  }
+}
