@@ -35,6 +35,9 @@
             margin: 15px 0;
             display: flex;
             justify-content: space-between;
+            
+            @include lg-mobile { font-size: 13px; }
+            @include mobile { font-size: 11px; }
 
             .Date,
             .Author {
