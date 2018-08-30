@@ -1,5 +1,6 @@
 backend:
-  name: test-repo
+  name: github
+  repo: Aaronjoshuachua/autumn-static
 
 media_folder: "/static/files/images"
 public_folder: "/files/images"
