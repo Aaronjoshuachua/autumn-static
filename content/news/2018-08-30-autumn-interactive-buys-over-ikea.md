@@ -4,7 +4,7 @@ path: /news/autumn-crew
 title: Autumn Interactive buys over IKEA
 date: '2018-08-30T14:39:56+08:00'
 author: 'Mary Bjolner, BBC'
-postimage: /files/images/autumncrewinc.jpg
+postimage: /files/images/news-autumncrewinc.jpg
 tags:
   - name: autumninteractive
   - name: wtf
