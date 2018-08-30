@@ -1,10 +1,10 @@
 ---
+contentType: news
+path: /news/new-site
 title: Pandas and Bananas
 date: 2018-01-26T04:29:33.000Z
-path: /news/pandas-bananas
+author: Aaron Joshua
 postimage: /files/images/news-res2.jpg
-author: Andrew Thian
-contentType: news
 tags:
   - name: pandas
   - name: bananas
